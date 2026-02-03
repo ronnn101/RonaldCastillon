@@ -1,0 +1,82 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Portrait layout: centered vertically */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #0d0d0d, #1a1a40);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: white;
+}
+
+/* Portrait card container */
+.portrait-card {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    padding: 25px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    width: 260px; /* narrow portrait width */
+}
+
+/* Output text */
+#output {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 220px; /* keeps it portrait, not wide */
+    word-wrap: break-word; /* wraps long text */
+}
+
+/* Input field */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #00aaff;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Hover text */
+#hoverText {
+    font-size: 18px;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
