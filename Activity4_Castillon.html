@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castillon's Profile</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e6f4ea;
+      color: #333;
+    }
+
+    header {
+      background-color: #2f7d4f;
+      color: white;
+      padding: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .profile-wrapper {
+      background-color: #ccead6;
+      padding: 15px;
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-wrapper img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #2f7d4f;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: #ccead6;
+      color: #2f7d4f;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 15px;
+      font-size: 14px;
+    }
+
+    .project {
+      border: 1px solid #dcdcdc;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      background-color: #f9fff9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+      .sidebar {
+        flex: 1;
+      }
+      .content {
+        flex: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Ronald Castillon</h1>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- PROFILE PICTURE SPACE -->
+      <div class="profile-wrapper">
+        <img src="ronaldo.jpg">
+      </div>
+
+      <h2>Ronald Castillon</h2>
+      <p>BSIT-2E</p>
+      <p>IT Student / Frontend Beginner</p>
+      <p>Email: ronaldcastillon@gmail.com</p>
+      <p>Phone: 0912-345-6789</p>
+      <p>
+        <a href="#">LinkedIn</a> |
+        <a href="#">GitHub</a>
+      </p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <h2>About Me</h2>
+      <p>
+        I am a first-year IT student learning web development.
+        I enjoy creating simple and responsive websites.
+      </p>
+
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+
+      <h2>Projects</h2>
+      <div class="project">Project 1: Personal Profile Page</div>
+      <div class="project">Project 2: Simple Login Form</div>
+      <div class="project">Project 3: Basic Portfolio Website</div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 COOL
+  </footer>
+
+</body>
+</html>
