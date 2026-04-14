@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Activity 5</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            font-family: Arial, sans-serif;
+            color: #00ff88;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 0 15px #00ff88;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            background-color: #00ff88;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #00cc6a;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Get User Info</h2>
+
+    <input type="number" id="userId" placeholder="Enter User ID">
+    <br>
+    <button onclick="getUser()">Get Info</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function getUser() {
+    let id = document.getElementById("userId").value;
+
+    fetch("process.php?id=" + id)
+    .then(response => response.json())
+    .then(data => {
+        let result = document.getElementById("result");
+
+        if (data.error) {
+            result.innerHTML = "<span style='color:red'>" + data.error + "</span>";
+        } else {
+            result.innerHTML =
+                "<b>Name:</b> " + data.name + "<br>" +
+                "<b>Age:</b> " + data.age + "<br>" +
+                "<b>Course:</b> " + data.role;
+        }
+    });
+}
+</script>
+
+</body>
+</html>
